@@ -16,4 +16,9 @@ jobs:
       image: returntocorp/semgrep
     steps:
     - uses: actions/checkout@v3
-    - run: semgrep ci --sarif > semgrep.sarif
+    - run: semgrep ci
+    - run: semgrep ci --sarif > TestRepo3/logs/semgrep.sarif
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: TestRepo3/logs/semgrep.sarif
