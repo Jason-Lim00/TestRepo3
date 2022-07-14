@@ -23,6 +23,7 @@
 #
 # To ignore a file with a literal ':' character, escape it with
 # a backslash, e.g. "\:foo".
+test2.py
 
 semgrep-core/tests/
 
